@@ -34,7 +34,7 @@
 
   <h1>¡Bienvenido a AulaNet!</h1>
 
-  <p>Esta es mi primera página creada con HTML.</p>
+  <p>Este es nuestro sitio web para presentar el proyecto.</p>
 
   <button onclick="alert('¡Hola!')">
     Haz clic aquí
