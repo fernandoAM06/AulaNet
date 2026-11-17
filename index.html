@@ -1,44 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>AulaNet</title>
-  <style>
-    body {
-      background-color: #eaf2ff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AulaNet - Redes para institutos</title>
+<meta name="description" content="AulaNet se dedica al montaje de redes seguras y ordenadas en institutos y centros educativos.">
+<style>
+:root{--azul:#1d4f91;--oscuro:#1b2733;--gris:#5a6672;--linea:#d9dee3;--fondo:#f4f6f8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Verdana,Geneva,"DejaVu Sans",sans-serif;color:var(--oscuro);background:#fff;line-height:1.65;font-size:16px}
+a{color:var(--azul)}
+:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:0 0 .6em;line-height:1.25}
+h1{font-size:2.3rem}
+h2{font-size:1.7rem}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
 
-    h1 {
-      color: #2563eb;
-    }
+header{background:var(--azul);color:#fff}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-top:14px;padding-bottom:14px}
+.logo{font-family:Georgia,serif;font-size:1.6rem;font-weight:bold;color:#fff;text-decoration:none}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:.92rem}
+nav a:hover{text-decoration:underline}
 
-    p {
-      font-size: 20px;
-      color: #333;
-    }
+.portada{background:var(--fondo);border-bottom:1px solid var(--linea);padding:56px 0}
+.portada .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.portada p{color:var(--gris)}
+.boton{display:inline-block;background:var(--azul);color:#fff;padding:11px 20px;border-radius:3px;text-decoration:none}
+.boton:hover{background:#163c70}
+.esquema{background:#fff;border:1px solid var(--linea);padding:10px}
+.esquema svg{width:100%;height:auto;display:block}
 
-    button {
-      background-color: #2563eb;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  </style>
+section{padding:48px 0;border-bottom:1px solid var(--linea)}
+section.gris{background:var(--fondo)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem}
+th,td{border:1px solid var(--linea);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#e8edf2}
+.tabla{overflow-x:auto}
+
+ul.lista{padding-left:20px;margin:0 0 1em}
+ul.lista li{margin-bottom:.4em}
+
+.contacto{background:var(--oscuro);color:#fff;border:0}
+.contacto a{color:#9cc4f5}
+.contacto p{color:#d4dce4}
+footer{padding:20px 0;font-size:.85rem;color:var(--gris)}
+
+@media (max-width:760px){
+  .portada .wrap,.dos{grid-template-columns:1fr}
+  h1{font-size:1.9rem}
+  nav a{margin:0 14px 0 0}
+}
+</style>
 </head>
 <body>
 
-  <h1>¡Bienvenido a AulaNet!</h1>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">AulaNet</a>
+    <nav aria-label="Principal">
+      <a href="#que-hacemos">Qué hacemos</a>
+      <a href="#zonas">Zonas de la red</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-  <p>Este es nuestro sitio web para presentar el proyecto.</p>
+<main id="inicio">
 
-  <button onclick="alert('¡Hola!')">
-    Haz clic aquí
-  </button>
+<div class="portada">
+  <div class="wrap">
+    <div>
+      <h1>Montaje de redes para institutos</h1>
+      <p>Somos AulaNet, una empresa dedicada al montaje de redes informáticas en institutos y centros educativos. Instalamos la red, la dividimos por zonas y ponemos en marcha sus servicios para que los datos de alumnos y familias estén mejor protegidos y todo sea fácil de mantener.</p>
+      <a class="boton" href="#contacto">Contactar</a>
+    </div>
+    <div class="esquema">
+      <svg viewBox="0 0 480 360" role="img" aria-label="Esquema de la red: Internet, router, switch y tres zonas">
+        <g font-family="Verdana,sans-serif" font-size="13" fill="#1b2733" text-anchor="middle">
+          <g stroke="#1b2733" stroke-width="2" fill="none">
+            <path d="M240 44V70"/><path d="M240 112V138"/>
+            <path d="M240 180V200H80V230"/><path d="M240 180V230"/><path d="M240 180V200H400V230"/>
+          </g>
+          <rect x="180" y="10" width="120" height="34" fill="#fff" stroke="#1b2733" stroke-width="2"/>
+          <text x="240" y="32">Internet</text>
+          <rect x="165" y="70" width="150" height="42" fill="#1d4f91"/>
+          <text x="240" y="96" fill="#fff">Router</text>
+          <rect x="165" y="138" width="150" height="42" fill="#fff" stroke="#1b2733" stroke-width="2"/>
+          <text x="240" y="164">Switch</text>
+          <rect x="10" y="230" width="140" height="110" fill="#e3ebf7" stroke="#1d4f91" stroke-width="2"/>
+          <text x="80" y="256" font-weight="bold">VLAN 10</text>
+          <text x="80" y="278">Administración</text><text x="80" y="296">y profesorado</text>
+          <rect x="170" y="230" width="140" height="110" fill="#e1f1ea" stroke="#2e7d5b" stroke-width="2"/>
+          <text x="240" y="256" font-weight="bold">VLAN 30</text>
+          <text x="240" y="278">Servidores</text><text x="240" y="296">del centro</text>
+          <rect x="330" y="230" width="140" height="110" fill="#fbeed4" stroke="#b9770e" stroke-width="2"/>
+          <text x="400" y="256" font-weight="bold">VLAN 20</text>
+          <text x="400" y="278">Alumnos</text><text x="400" y="296">y visitantes</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="que-hacemos">
+  <div class="wrap">
+    <h2>Qué hacemos</h2>
+    <div class="dos">
+      <div>
+        <p>En muchos institutos todo está conectado a la misma red: los ordenadores de secretaría, los de los profesores y el wifi de los alumnos. Si algo falla o alguien se cuela, los datos de alumnos y familias quedan expuestos.</p>
+        <p>Además, casi ningún centro tiene un informático propio, y contratar a una gran empresa sale caro. Nosotros ofrecemos un servicio completo y a buen precio, pensado para centros pequeños y medianos.</p>
+      </div>
+      <div>
+        <p>Nos dedicamos al montaje de redes en institutos: diseñamos la red, la instalamos y la dividimos en tres zonas, de forma que cada grupo solo llegue a lo que necesita. Después montamos los servicios básicos: usuarios, carpetas compartidas, correo, web, direcciones automáticas (DHCP) y nombres de equipos (DNS).</p>
+        <p>También configuramos las medidas de seguridad, programamos copias de seguridad y vigilamos que todo funcione. Al terminar, dejamos todo documentado para que el centro sepa cómo está montada su red.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zonas" class="gris">
+  <div class="wrap">
+    <h2>Las tres zonas de la red</h2>
+    <p>Separamos la red con VLAN (estándar 802.1Q). Un router se encarga de decidir qué zona puede comunicarse con cuál.</p>
+    <div class="tabla">
+      <table>
+        <thead><tr><th>Zona</th><th>Quién la usa</th><th>Qué puede hacer</th></tr></thead>
+        <tbody>
+          <tr><td>VLAN 10</td><td>Administración y profesorado</td><td>Acceder a los recursos internos, los expedientes y la gestión del centro.</td></tr>
+          <tr><td>VLAN 20</td><td>Alumnos y visitantes (Wi-Fi)</td><td>Solo salir a internet. No llegan al resto de zonas.</td></tr>
+          <tr><td>VLAN 30</td><td>Servidores del centro</td><td>Alojan la web, el correo, el DHCP y el DNS.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2>Servicios que instalamos</h2>
+    <div class="dos">
+      <ul class="lista">
+        <li><strong>DHCP:</strong> los ordenadores y móviles reciben su dirección solos.</li>
+        <li><strong>DNS:</strong> se entra a equipos y webs del centro por su nombre.</li>
+        <li><strong>Usuarios y carpetas:</strong> cada persona tiene su cuenta y las carpetas de su grupo.</li>
+      </ul>
+      <ul class="lista">
+        <li><strong>Correo:</strong> cada usuario tiene su buzón del instituto.</li>
+        <li><strong>Web:</strong> servidor web propio del centro.</li>
+        <li><strong>Copias de seguridad:</strong> automáticas, para recuperar un archivo perdido.</li>
+      </ul>
+    </div>
+    <h3>Quién usa la red</h3>
+    <p>Los <strong>administradores</strong> (nuestro equipo técnico) gestionan la red. El <strong>profesorado y la secretaría</strong> consultan y modifican sus propios datos. Los <strong>visitantes</strong> solo tienen salida a internet.</p>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <p>¿Quieres una red más ordenada y segura para tu instituto? Escríbenos o llámanos y te explicamos cómo lo haríamos.</p>
+    <p>
+      Correo: <a href="mailto:AulaNet@gmail.com">AulaNet@gmail.com</a><br>
+      Teléfono: <a href="tel:+34612483790">612 48 37 90</a><br>
+      Equipo: Fernando Arias y Selvin Perdomo
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 AulaNet · Montaje de redes para institutos</div>
+</footer>
 
 </body>
 </html>
